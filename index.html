@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>
+{
+  "startingRoom": "Green St.",
+  "endingRoom": "Room full of kittens!",
+  "player" : {
+    "items": [
+
+      ],
+    "currentHealth" : 10,
+    "maxHealth": 10
+  },
+  "rooms": [
+    {
+      "name": "Green St.",
+      "description": "You are on Green St., outside the HERE. Apt.",
+      "directions": [
+        {
+          "directionName": "Forward",
+          "room": "HERE. Apt"
+        }
+      ]
+    },
+    {
+      "name": "HERE. Apt lobby",
+      "description": "You are at the lobby of HERE. apartment. You used the key to get inside!",
+      "directions": [
+        {
+          "directionName": "Backward",
+          "room": "Green St."
+        },
+        {
+          "directionName": "Forward",
+          "room": "Elevator"
+        },
+        {
+          "directionName": "Right",
+          "room": "Restroom"
+        }
+      ]
+    },
+    {
+      "name": "Restroom",
+      "description": "You are at the lobby restroom.  There could be something HERE for you to progress on.",
+      "items": [
+        {
+          "name": "Elevator Key"
+        }
+      ],
+      "directions": [
+        {
+          "directionName": "Left",
+          "room": "HERE. Apt lobby"
+        }
+      ]
+    },
+    {
+      "name": "Elevator",
+      "description": "You are by the elevator. You MUST progress on but you need a key for the elevator...",
+      "directions": [
+        {
+          "directionName": "Forward",
+          "room": "Elevator Room"
+        }, 
+        {
+          "directionName": "Backward",
+          "room": "HERE. Apt lobby"
+        }
+      ]
+    },
+    {
+      "name": "Elevator Room",
+      "description": "You got in the elevator using the key.",
+      "items": [
+        {
+          "name": "Cat toy"
+        }
+      ],
+      "directions": [
+        {
+          "directionName": "5",
+          "room": "Floor 5"
+        },
+        {
+          "directionName": "6",
+          "room": "Floor 6"
+        },
+        {
+          "directionName": "7",
+          "room": "Floor 7"
+        }
+      ]
+    },
+    {
+      "name": "Floor 5",
+      "description": "You are on the 5th floor. There's a cat here and it attacks you!!!",
+      "cats" : [
+        {
+          "name" : "Scaredy cat",
+          "attackDamage" : 2
+        }
+      ],
+      "directions": [
+        {
+          "directionName": "6",
+          "room": "Floor 6"
+        },
+        {
+          "directionName": "7",
+          "room": "Floor 7"
+        }
+      ]
+    },
+    {
+      "name": "Floor 6",
+      "description": "You are on Floor 6. There's a cat here and it attacks you!!!",
+      "cats" : [
+        {
+          "name" : "Scaredy cat2",
+          "attackDamage" : 4
+        }
+      ],
+      "directions": [
+        {
+          "directionName": "5",
+          "room": "Floor 5"
+        },
+        {
+          "directionName": "7",
+          "room": "Floor 7"
+        }
+      ]
+    },
+    {
+      "name": "Floor 7",
+      "description": "You are at the floor of your final destination. Take a moment to prepare your heart.",
+      "directions": [
+        {
+          "directionName": "Forward",
+          "room": "Room 706"
+        }
+      ]
+    },
+    {
+      "name": "Room 706",
+      "description": "This is Jason's apartment. It is full of kittens!"
+    }
+  ]
+}
+</p>
+</body>
+</html>
